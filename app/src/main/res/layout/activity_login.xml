@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        tools:ignore="RtlSymmetry,VisualLintTextFieldSize" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="password"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        tools:ignore="RtlSymmetry,VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/forgot_your_password"
+        android:textColor="@color/red_bordeaux"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/logInButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/red_bordeaux"
+        android:text="@string/log_in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="or"/>
+    <Button
+        android:id="@+id/googleLogInBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/red_bordeaux"
+        android:text="Login with Google"
+        android:layout_marginBottom="16dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="140dp">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/red_bordeaux"
+            android:text="@string/back"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="goBack"
+            tools:ignore="UsingOnClickInXml" />
+
+        <TextView
+            android:id="@+id/noAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_account"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/red_bordeaux"
+            android:layout_marginStart="140dp"/>
+    </LinearLayout>
+</LinearLayout>

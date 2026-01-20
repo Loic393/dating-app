@@ -1,0 +1,45 @@
+<!-- activity_match.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Match.MatchesActivity">
+
+    <!-- Other UI elements -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="New Matches"
+        android:textColor="@color/black"
+        android:id="@+id/matchTitle"
+        android:textStyle="bold"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMatches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:layout_below="@+id/matchTitle"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Chats"
+        android:textColor="@color/black"
+        android:id="@+id/chatTitle"
+        android:layout_below="@id/recyclerViewMatches"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:layout_below="@+id/chatTitle"/>
+</RelativeLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textStyle="bold"
+    />
+    <!-- Profile Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewProfile"
+        android:padding="10dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/custom_edittext"
+        android:src="@drawable/profilepic"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Edit Profile Image Button -->
+    <Button
+        android:id="@+id/btnEditProfileImage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:textSize="20sp"
+        android:onClick="changeAvatar"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/red_bordeaux"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:text="@string/edit_profile_image" />
+
+    <!-- Name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textViewNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/john_doe"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+
+    </LinearLayout>
+
+    <!-- Birthday -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewBirthdayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/birthday_"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewBirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_01_01_2001"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="16dp" />
+
+
+    </LinearLayout>
+    <!-- Similar structure for Birthday, Height, and Biography -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewHeightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/height"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_175_cm_"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="20dp"/>
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_175_cm"
+            android:layout_marginStart="20dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
+            android:inputType="text"
+            tools:ignore="LabelFor,TextFields" />
+
+        <Button
+            android:id="@+id/btnEditHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:backgroundTint="@color/red_bordeaux"
+            android:background="@drawable/rounded_corners"
+            android:textAllCaps="false"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textViewBioLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/biography_"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i_love_you_"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+        <EditText
+            android:id="@+id/editTextBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i_love_you"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnEditBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:backgroundTint="@color/red_bordeaux"
+            android:background="@drawable/rounded_corners"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/red_bordeaux"
+            android:text="@string/back"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="goBack"
+            tools:ignore="UsingOnClickInXml"
+            android:layout_marginTop="100dp"/>
+    </LinearLayout>
+</LinearLayout>

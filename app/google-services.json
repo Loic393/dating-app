@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "151889160012",
+    "firebase_url": "https://soulmatch-3079f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "soulmatch-3079f",
+    "storage_bucket": "soulmatch-3079f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151889160012:android:841eba74876d31492b91e9",
+        "android_client_info": {
+          "package_name": "com.example.dating_app_a3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151889160012-2j5slli51319h83fhiutkbrd50g6j81p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dating_app_a3",
+            "certificate_hash": "c4a59938582238911d892f306dab9e5a0ea4da02"
+          }
+        },
+        {
+          "client_id": "151889160012-riavcdrqub87oigr1ogd04ou930kfv35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD14oTJzqFLfBm5C9U25p0GMpLg5QBCUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151889160012-riavcdrqub87oigr1ogd04ou930kfv35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".ProfileSetupActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/profile_setup"
+        android:textColor="@color/red_bordeaux"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title"
+        android:paddingStart="20dp"
+        android:background="@drawable/custom_edittext"
+        android:hint="@string/name"
+        tools:ignore="RtlSymmetry"
+        android:autofillHints=""
+        android:inputType="textPersonName" />
+    <TextView
+        android:id="@+id/textViewBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textSize="20sp"
+        android:textColor="@color/red_bordeaux"
+        android:layout_below="@id/editTextName"
+        android:layout_marginTop="16dp"/>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutBirthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewBirthday">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextBirthday"
+            android:background="@drawable/custom_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="20dp"
+            android:hint="@string/select_birthday"
+            android:focusable="false"
+            android:onClick="showDatePicker"
+            tools:ignore="RtlSymmetry,UsingOnClickInXml" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <EditText
+        android:id="@+id/editTextBiography"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/custom_edittext"
+        android:layout_below="@id/textInputLayoutBirthday"
+        android:layout_marginTop="16dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:hint="@string/biography"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:minLines="4"
+        android:gravity="top|left"
+        android:scrollbars="vertical"
+        tools:ignore="RtlHardcoded,RtlSymmetry"
+        android:autofillHints="" />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBiography"
+        android:text="@string/i_am"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/red_bordeaux"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="5dp"/>
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupGender"
+        android:text="@string/i_prefer"
+        android:textSize="20sp"
+        android:textColor="@color/red_bordeaux"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="5dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPreferredSex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text2"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonPreferredMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPreferredFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPreferredBoth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/both" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSaveProfile"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupPreferredSex"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/red_bordeaux"
+        android:text="@string/save_profile" />
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".SetProfilePictureActivity">
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:background="@drawable/custom_edittext"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/profilepic"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/profile_picture"/>
+
+    <Button
+        android:id="@+id/chooseImageButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Choose Image"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/red_bordeaux"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chooseImageButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="358dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/save"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/red_bordeaux"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chooseImageButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="358dp"
+        android:layout_marginEnd="156dp"
+        android:layout_toStartOf="@+id/saveButton"
+        android:onClick="goBack"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/red_bordeaux"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
